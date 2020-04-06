@@ -61,129 +61,7 @@
 			
 
 		</div>
-		<!--==== INFO CORONA ======-->
-		<style>
-		.datax #show1{
-		    width: 31%;
-		    float: left;
-		    text-align: center;
-		}.datax #show2{
-		    width: 31%;
-		    float: left;
-		    text-align: center;
-		}.datax #show3{
-		    width: 31%;
-		    float: left;
-		    text-align: center;
-		}
-		.positif, .sembuh, .meninggal {
-		    margin: 1%;
-		    border-radius: 5px;
-		    box-shadow: 0 1px 2px 2px rgba(0,0,0,.5);
-		    text-overflow: ellipsis;
-		    overflow: hidden;
-		    color: white;
-		    font-family: cursive;
-		}
-		.datax .positif {
-		    background: #ed2828;
-		}
-		.datax .sembuh {
-		    background: #4166F1;
-		}
-		.datax .meninggal {
-		    background: #000000;
-		}
-		#show1 .angka {
-		    font-size: 2em;
-		    font-weight: 700;
-		text-shadow: 2px 2px 4px #000000;
-		}
-		#show2 .angka {
-		    font-size: 2em;
-		    font-weight: 700;
-		text-shadow: 2px 2px 4px #000000;
-		}
-		#show3 .angka {
-		    font-size: 2em;
-		    font-weight: 700;
-		text-shadow: 2px 2px 4px #000000;
-		}
-		#show1 .detail {
-		    background: white;
-		    width: 100%;
-		    display: block;
-		    color: black;
-		    box-shadow: 0px -2px 4px 1px #66c7ff;
-		}
-		#show2 .detail {
-		    background: white;
-		    width: 100%;
-		    display: block;
-		    color: black;
-		    box-shadow: 0px -2px 4px 1px #66c7ff;
-		}
-		#show3 .detail {
-		    background: white;
-		    width: 100%;
-		    display: block;
-		    color: black;
-		    box-shadow: 0px -2px 4px 1px #66c7ff;
-		}
-		.datax .title {
-		    text-align: center;
-		    text-transform: uppercase;
-		    font-family: monospace;
-		    font-size:1em;
-		}
-		</style>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-		<script>
-		$(document).ready(function(){
-		var d = new Date();
-		var month = new Array();
-		  month[0] = "Januari";
-		  month[1] = "Februari";
-		  month[2] = "Maret";
-		  month[3] = "April";
-		  month[4] = "Mei";
-		  month[5] = "Juni";
-		  month[6] = "Juli";
-		  month[7] = "Agustus";
-		  month[8] = "September";
-		  month[9] = "Oktober";
-		  month[10] = "November";
-		  month[11] = "Desember";
-
-		$("#date").html(d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear());
-		    $.ajax({async: true, cache: true, url: "https://api.kawalcorona.com/indonesia/", success: function(result){
-		     $("#positif").html(result[0].positif);
-		     $("#sembuh").html(result[0].sembuh);
-		     $("#meninggal").html(result[0].meninggal);
-		    }});
-		});
-		</script>
-		<div class="datax">
-		<div class="title">
-		<h1>covid-19 indonesia : <span id="date"></span></h1>
-		</div>
-		<div id="show1" class="positif">
-		<div id="positif" class="angka">
-
-		</div>
-		<span class="detail">Positif</span>
-		</div>
-		<div id="show2" class="sembuh">
-		<div id="sembuh" class="angka"></div>
-		<span class="detail">Sembuh</span>
-		</div>
-		<div id="show3" class="meninggal">
-		<div id="meninggal" class="angka"></div>
-		<span class="detail">Meninggal</span>
-		</div>
-		</div>
-		<!--=== End Info Corona ===-->
+		
 	</header>
 	<!--================ End Header =================-->
 
@@ -221,6 +99,129 @@
 				</div>
 			</div>
 		</div>
+		<!--==== INFO CORONA ======-->
+			<style>
+			.datax #show1{
+			    width: 31%;
+			    float: left;
+			    text-align: center;
+			}.datax #show2{
+			    width: 31%;
+			    float: left;
+			    text-align: center;
+			}.datax #show3{
+			    width: 31%;
+			    float: left;
+			    text-align: center;
+			}
+			.positif, .sembuh, .meninggal {
+			    margin: 1%;
+			    border-radius: 5px;
+			    box-shadow: 0 1px 2px 2px rgba(0,0,0,.5);
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			    color: white;
+			    font-family: cursive;
+			}
+			.datax .positif {
+			    background: #ed2828;
+			}
+			.datax .sembuh {
+			    background: #4166F1;
+			}
+			.datax .meninggal {
+			    background: #000000;
+			}
+			#show1 .angka {
+			    font-size: 2em;
+			    font-weight: 700;
+			text-shadow: 2px 2px 4px #000000;
+			}
+			#show2 .angka {
+			    font-size: 2em;
+			    font-weight: 700;
+			text-shadow: 2px 2px 4px #000000;
+			}
+			#show3 .angka {
+			    font-size: 2em;
+			    font-weight: 700;
+			text-shadow: 2px 2px 4px #000000;
+			}
+			#show1 .detail {
+			    background: white;
+			    width: 100%;
+			    display: block;
+			    color: black;
+			    box-shadow: 0px -2px 4px 1px #66c7ff;
+			}
+			#show2 .detail {
+			    background: white;
+			    width: 100%;
+			    display: block;
+			    color: black;
+			    box-shadow: 0px -2px 4px 1px #66c7ff;
+			}
+			#show3 .detail {
+			    background: white;
+			    width: 100%;
+			    display: block;
+			    color: black;
+			    box-shadow: 0px -2px 4px 1px #66c7ff;
+			}
+			.datax .title {
+			    text-align: center;
+			    text-transform: uppercase;
+			    font-family: monospace;
+			    font-size:1em;
+			}
+			</style>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+			<script>
+			$(document).ready(function(){
+			var d = new Date();
+			var month = new Array();
+			  month[0] = "Januari";
+			  month[1] = "Februari";
+			  month[2] = "Maret";
+			  month[3] = "April";
+			  month[4] = "Mei";
+			  month[5] = "Juni";
+			  month[6] = "Juli";
+			  month[7] = "Agustus";
+			  month[8] = "September";
+			  month[9] = "Oktober";
+			  month[10] = "November";
+			  month[11] = "Desember";
+
+			$("#date").html(d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear());
+			    $.ajax({async: true, cache: true, url: "https://api.kawalcorona.com/indonesia/", success: function(result){
+			     $("#positif").html(result[0].positif);
+			     $("#sembuh").html(result[0].sembuh);
+			     $("#meninggal").html(result[0].meninggal);
+			    }});
+			});
+			</script>
+			<div class="datax">
+			<div class="title">
+			<h1>covid-19 indonesia : <span id="date"></span></h1>
+			</div>
+			<div id="show1" class="positif">
+			<div id="positif" class="angka">
+
+			</div>
+			<span class="detail">Positif</span>
+			</div>
+			<div id="show2" class="sembuh">
+			<div id="sembuh" class="angka"></div>
+			<span class="detail">Sembuh</span>
+			</div>
+			<div id="show3" class="meninggal">
+			<div id="meninggal" class="angka"></div>
+			<span class="detail">Meninggal</span>
+			</div>
+			</div>
+		<!--=== End Info Corona ===-->
 	</section>
 	<!--================ End Home Banner Area =================-->
 	
