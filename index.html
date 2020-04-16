@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
 	<!--================  Header Area =================-->
 	<header class="header_area">
 		<div class="main_menu">
@@ -36,7 +37,7 @@
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#aboutme.html">About Me </a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About Me </a></li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Blog</a>
@@ -58,10 +59,7 @@
 					</div>
 				</div>
 			</nav>
-			
-
 		</div>
-		
 	</header>
 	<!--================ End Header =================-->
 
@@ -72,11 +70,7 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="banner_content">
-                            <br>
-                            <br>
-                            <br>
-                            <h3 class="text-uppercase">Hell0 ! </h3>
-                            <h1>こんにちは !</h1>                            
+                            <h2>こんにちは..........!</h2>                      
                             <p>....ぼくは................ </p>
                             <h1 class="text-uppercase">ADIA WAHYU DWI PRASETYA </h1>
                             <p>.........です！............. </p>
@@ -84,8 +78,8 @@
                             <h2 class="text-uppercase">"Ngecode & Recode" ? はい。。i'm !</h2>
 							<div class="d-flex align-items-center">
                                 <a class="primary_btn" href="#"><span>MY PROJECT</span></a>
-                                <a class="primary_btn tr-bg" href="#"><span>MY BLOG</span></a>
-                                <a class="primary_btn" href="#"><span>MY TUGAS</span></a>
+                                <a class="primary_btn tr-bg" href="https://adiakdcodee.blogspot.com/"><span>MY BLOG</span></a>
+                                <a class="primary_btn" href="https://adiakdcodee.blogspot.com/search/label/Tugas"><span>MY TUGAS</span></a>
                             </div>
                         
                             
@@ -99,152 +93,34 @@
 				</div>
 			</div>
 		</div>
-		<!--==== INFO CORONA ======-->
-			<style>
-			.datax #show1{
-			    width: 31%;
-			    float: left;
-			    text-align: center;
-			}.datax #show2{
-			    width: 31%;
-			    float: left;
-			    text-align: center;
-			}.datax #show3{
-			    width: 31%;
-			    float: left;
-			    text-align: center;
-			}
-			.positif, .sembuh, .meninggal {
-			    margin: 1%;
-			    border-radius: 5px;
-			    box-shadow: 0 1px 2px 2px rgba(0,0,0,.5);
-			    text-overflow: ellipsis;
-			    overflow: hidden;
-			    color: white;
-			    font-family: cursive;
-			}
-			.datax .positif {
-			    background: #ed2828;
-			}
-			.datax .sembuh {
-			    background: #4166F1;
-			}
-			.datax .meninggal {
-			    background: #000000;
-			}
-			#show1 .angka {
-			    font-size: 2em;
-			    font-weight: 700;
-			text-shadow: 2px 2px 4px #000000;
-			}
-			#show2 .angka {
-			    font-size: 2em;
-			    font-weight: 700;
-			text-shadow: 2px 2px 4px #000000;
-			}
-			#show3 .angka {
-			    font-size: 2em;
-			    font-weight: 700;
-			text-shadow: 2px 2px 4px #000000;
-			}
-			#show1 .detail {
-			    background: white;
-			    width: 100%;
-			    display: block;
-			    color: black;
-			    box-shadow: 0px -2px 4px 1px #66c7ff;
-			}
-			#show2 .detail {
-			    background: white;
-			    width: 100%;
-			    display: block;
-			    color: black;
-			    box-shadow: 0px -2px 4px 1px #66c7ff;
-			}
-			#show3 .detail {
-			    background: white;
-			    width: 100%;
-			    display: block;
-			    color: black;
-			    box-shadow: 0px -2px 4px 1px #66c7ff;
-			}
-			.datax .title {
-			    text-align: center;
-			    text-transform: uppercase;
-			    font-family: monospace;
-			    font-size:1em;
-			}
-			</style>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-			<script>
-			$(document).ready(function(){
-			var d = new Date();
-			var month = new Array();
-			  month[0] = "Januari";
-			  month[1] = "Februari";
-			  month[2] = "Maret";
-			  month[3] = "April";
-			  month[4] = "Mei";
-			  month[5] = "Juni";
-			  month[6] = "Juli";
-			  month[7] = "Agustus";
-			  month[8] = "September";
-			  month[9] = "Oktober";
-			  month[10] = "November";
-			  month[11] = "Desember";
-
-			$("#date").html(d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear());
-			    $.ajax({async: true, cache: true, url: "https://api.kawalcorona.com/indonesia/", success: function(result){
-			     $("#positif").html(result[0].positif);
-			     $("#sembuh").html(result[0].sembuh);
-			     $("#meninggal").html(result[0].meninggal);
-			    }});
-			});
-			</script>
-			<div class="datax">
-			<div class="title">
-			<h1>covid-19 indonesia : <span id="date"></span></h1>
-			</div>
-			<div id="show1" class="positif">
-			<div id="positif" class="angka">
-
-			</div>
-			<span class="detail">Positif</span>
-			</div>
-			<div id="show2" class="sembuh">
-			<div id="sembuh" class="angka"></div>
-			<span class="detail">Sembuh</span>
-			</div>
-			<div id="show3" class="meninggal">
-			<div id="meninggal" class="angka"></div>
-			<span class="detail">Meninggal</span>
-			</div>
-			</div>
-		<!--=== End Info Corona ===-->
 	</section>
 	<!--================ End Home Banner Area =================-->
-	
+
 	<!--================  About ME Area =================-->
 	<section class="about_area section_gap">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
 					<div class="about_img">
-						<img class="" src="img/about-us.png" alt="">
+						<img class="about_img" src="img/banner/ddball.jpg" alt="">
 					</div>
 				</div>
 
 				<div class="offset-lg-1 col-lg-5">
 					<div class="main_title text-left">
-						<h2>Konnichiwa <br>
+						<h2>はじめまして..!<br>
 							Heheheh<br>
 							</h2>
 						<p>
 							Wadidaw jiwa!
 						</p>
 						<p>
-							Yoroshiku Onegai Shimasu !!!
+							アディアです！<br>
+							インドネシアじんです！<br>
+							わたしはUniversity of Muhammadiyah Jemberの学生です！ 
+							NGECODE AND RECODE ADALAH KEAHLIAN SAYA <br>
+							Wkwkwwkw
+							どうぞよろしくおねがいします！
 						</p>
 						<a class="primary_btn" href="#"><span>About Me</span></a>
 					</div>
@@ -356,10 +232,9 @@
 							<h4>Follow Me</h4>
 						</div>
 						<div class="footer_social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
+							<a href="https://www.facebook.com/OfficialAdia48AcT"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.twitter.com/AdiaK_Neeh"><i class="fa fa-twitter"></i></a>
+							
 						</div>
 					</div>
 				</div>
@@ -367,7 +242,7 @@
 			<div class="row footer_bottom justify-content-center">
 				<p class="col-lg-8 col-sm-12 footer-text">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Template Recode by AdiaK Projec[T]  Original Template <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> <a></a>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | AdiaK Projec[T]</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 			</div>
 		</div>
