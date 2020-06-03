@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*Background */
+body{
+    background-color: linear-gradient( rgb(233, 230, 73),#EE7752, rgb(60, 231, 69),#E73C7E, #23A6D5,#23D5AB);
+    margin: 0;
+    padding: 0;
+}
+#headline{
+  background-color: rgb(240, 240, 111);
+  font-family: sans-serif;
+  font-size: 11px;
+  top: 0;
+}
+header {
+display: inline;
+}
+/*section {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, rgb(233, 230, 73),#EE7752,rgb(60, 231, 69),#E73C7E, #23A6D5,#23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 2s ease-in-out infinite;
+
+}*/
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+     50%{
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0 50%;
+     }
+}
+
+/* Navbar*/
+nav{
+    display: flex;
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: #eee2e2;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.nav-links li{
+    list-style: none;
+    
+}
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 19px;
+    font-weight: bold; 
+    display: grid; 
+    
+}
+.nav-links a:hover{
+    background: yellow;
+}
+/*line bar*/
+.lineq {
+    display: none;
+    cursor: pointer;
+}
+.lineq div{
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 5px;
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+        
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 52vh;
+        top: 9vh;
+        background-color: #eee2e2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .lineq {
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+/* logo jika HP*/
+.mobilelogo{
+  position: relative;
+  display: none;
+}
+/*Banner*/
+.banner{
+  position: sticky;
+  top: 1px;
+  
+}
+* {box-sizing:border-box}
+.mySlides {display:inline}
+
+/* Slideshow container */
+.slideshow-container {
+  min-height: 8vh;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Ket Gambar / Caption text */
+.text {
+  color: #25cf2d;
+  background-color: yellow;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 768px) {
+  .text {font-size: 11px}
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+#content {
+  float: left;
+  width: 70%;
+  padding-left: 5%;
+}
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.profile img {
+  width: 200px;
+}
+.profile header {
+    text-align: center;
+         }
+main {
+  padding: 40px;
+  overflow: auto;
+}
+aside {
+  float: right;
+  width: 27%;
+  padding-right: 5%;
+  }
+  @media screen and (max-width: 1000px) {
+      #content,
+      aside {
+          width: 100%;
+          padding: 0;
+      }
+   }
+
+   footer{
+    background: #eee2e2;
+    padding: 90px 0;
+    font-family: sans-serif;
+  }
+  
+  .footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .logo{
+    width: 180px;
+  }
+  
+  .social-media{
+    margin: 20px 0;
+  }
+  
+  .social-media a{
+    color: #001a21;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+  }
+  
+  .social-media a:hover{
+    color: #fc5c65;
+  }
+  
+  .right-col h1{
+    font-size: 26px;
+  }
+  
+  .border{
+    width: 100px;
+    height: 4px;
+    background: #fc5c65;
+  }
+  
+  .newsletter-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .txtb{
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+  }
+  
+  .btn{
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: #fc5c65;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+  }
+  
+  .btn:hover{
+    opacity: .7;
+  }
+  @media screen and (max-width:960px) {
+    .footer-container{
+      max-width: 600px;
+    }
+    .right-col{
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  
+    .left-col{
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  
+  @media screen and (max-width:700px){
+    .btn{
+      margin: 0;
+      width: 100%;
+      margin-top: 20px;
+      }
+  }
+  
